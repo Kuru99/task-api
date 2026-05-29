@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"fmt"
 	"net/http"
 	"os"
 	"strconv"
@@ -20,14 +19,6 @@ type Task struct {
 var db *sql.DB
 
 func main() {
-	// DB に接続
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=disable",
-		os.Getenv("DB_HOST"),
-		os.Getenv("DB_USER"),
-		os.Getenv("DB_PASSWORD"),
-		os.Getenv("DB_NAME"),
-	)
-
 	var err error
 	db, err = sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	if err != nil {
@@ -74,7 +65,6 @@ func main() {
 			return
 		}
 
-		// 更新された行数を確認
 		rowsAffected, _ := result.RowsAffected()
 		if rowsAffected == 0 {
 			c.JSON(http.StatusNotFound, gin.H{"message": "見つかりません"})
