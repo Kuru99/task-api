@@ -1,15 +1,15 @@
 # task-api
 
-Go + PostgreSQL で構築したタスク管理 REST API です。
+Go + PostgreSQL で構築したタスク管理 REST API です.
 
 ## 概要
 
-タスクの作成・取得・更新・削除（CRUD）を行える REST API です。
-Docker でコンテナ化し、Render にデプロイしています。
+タスクの作成・取得・更新・削除（CRUD）を行える REST API です.
+Docker でコンテナ化し、Render にデプロイしています
 
-**本番 URL**：https://task-api-g3m6.onrender.com
+**URL**：https://task-api-g3m6.onrender.com
 
-> ※ 無料プランのため、初回アクセス時に起動まで約 30〜50 秒かかる場合があります。
+> ※ 無料プランのため，初回アクセス時に起動まで約 30〜50 秒かかる場合があります．
 
 ---
 
@@ -63,20 +63,6 @@ Docker でコンテナ化し、Render にデプロイしています。
 - Docker
 - Docker Compose
 
-### 手順
-
-```bash
-# リポジトリをクローン
-git clone https://github.com/Kuru99/task-api.git
-cd task-api
-
-# 起動
-docker-compose up --build
-```
-
-`http://localhost:8080/tasks` にアクセスして動作確認できます。
-
----
 
 ## ディレクトリ構成
 
@@ -94,6 +80,6 @@ task-api/
 
 ## 工夫した点
 
-- **環境変数で接続情報を管理**：パスワードなどをコードに直書きせず、環境変数から読み込むことでセキュリティに配慮しました。
-- **Docker で環境を統一**：どの環境でも同じように動作するよう Docker でコンテナ化しました。
-- **マルチステージビルド**：Dockerfile をビルド環境と実行環境に分けることで、最終イメージを軽量化しました。
+- **環境変数で接続情報を管理**：パスワードなどをコードに直書きせず，環境変数から読み込むことでセキュリティに配慮しました．
+- **Docker で環境を統一**：どの環境でも同じように動作するよう Docker でコンテナ化しました．
+- **マルチステージビルド**：Dockerfile をビルド環境と実行環境に分けることで，最終イメージを軽量化しました．
