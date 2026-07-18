@@ -1,4 +1,5 @@
 # task-api
+※Render止めてるので動きません
 
 Go + PostgreSQL で構築したタスク管理 REST API です．GoやDockerの勉強の為に生成AIを使用して作成しました．
 
